@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* ------ Background ------ */
+
+.container {
+  display: grid;
+  grid: auto 1fr auto / 2fr 3fr 1fr;
+  height: 100svh;
+}
+
+.header {
+  grid-column: 1 / span 3;
+  background-color: darkslategrey;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: saddlebrown ridge 5px;
+}
+
+.left-sidebar {
+  grid-column: 1 / 2;
+  background-image: linear-gradient(
+    to right,
+    blue,
+    lightblue,
+    blue,
+    lightblue,
+    blue,
+    lightblue,
+    blue,
+    lightblue
+  );
+  border-right: saddlebrown ridge 10px;
+}
+
+.main {
+  grid-column: 2 / 3;
+  background-image: linear-gradient(
+    to right,
+    blue,
+    lightblue,
+    blue,
+    lightblue,
+    blue,
+    lightblue,
+    blue,
+    lightblue,
+    blue,
+    lightblue,
+    blue,
+    lightblue
+  );
+}
+
+.right-sidebar {
+  grid-column: 3 / 4;
+  background-image: linear-gradient(
+    to right,
+    blue,
+    lightblue,
+    blue,
+    lightblue,
+    blue,
+    lightblue
+  );
+  border-left: saddlebrown ridge 10px;
+}
+
+/* ------- Dark Background ------ */
+
+.header.hdark {
+  background-color: rgb(27, 46, 46);
+  border-bottom: rgb(87, 44, 13) ridge 5px;
+}
+
+.left-sidebar.ldark {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 100),
+    rgb(56, 103, 119),
+    rgb(0, 0, 100),
+    rgb(56, 103, 119),
+    rgb(0, 0, 100),
+    rgb(56, 103, 119),
+    rgb(0, 0, 100),
+    rgb(56, 103, 119)
+  );
+  border-right: rgb(87, 44, 13) ridge 10px;
+}
+
+.main.mdark {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 100),
+    rgb(56, 103, 119),
+    rgb(0, 0, 100),
+    rgb(56, 103, 119),
+    rgb(0, 0, 100),
+    rgb(56, 103, 119),
+    rgb(0, 0, 100),
+    rgb(56, 103, 119),
+    rgb(0, 0, 100),
+    rgb(56, 103, 119),
+    rgb(0, 0, 100),
+    rgb(56, 103, 119)
+  );
+}
+
+.right-sidebar.rdark {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 100),
+    rgb(56, 103, 119),
+    rgb(0, 0, 100),
+    rgb(56, 103, 119),
+    rgb(0, 0, 100),
+    rgb(56, 103, 119)
+  );
+  border-left: rgb(87, 44, 13) ridge 10px;
+}
+
+/* ------- Cookie Notice Buttons ------- */
+
+#cookie-notice {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000b4;
+  color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.cookie-button {
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  background-color: yellow;
+}
+
+.cookie-button:hover,
+#button-theme-toggle:hover,
+#save-button:hover {
+  background-color: gold;
+}
+
+/* -------- Header --------- */
+
+#button-theme-toggle {
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  background-color: yellow;
+}
+/* -------- Left Sidebar -------- */
+
+#cookie-image {
+  display: block;
+  width: 75%;
+  margin: 30% auto 0 auto;
+  transition: width 0.1s ease;
+}
+
+.left-sidebar-text {
+  background-color: #000000b4;
+  color: white;
+  text-align: center;
+  margin: 1% 5% 0 5%;
+  padding: 2% 0 2% 0;
+  border-radius: 8px;
+}
+
+/* ------- Main --------- */
+
+.information {
+  background-color: #000000b4;
+  color: white;
+  margin: 1% 5% 0 5%;
+  padding: 2% 2% 2% 2%;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#save-button {
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  background-color: yellow;
+  margin-top: 10px;
+}
+
+.active-upgrade {
+  margin-top: 1rem;
+}
+
+/* -------- Right Sidebar -------- */
+
+.upgrade-buttons {
+  width: 100%;
+  padding: 1rem 0 1rem 0;
+  margin: 1% 0 1% 0;
+  background-color: gray;
+  border-radius: 8px;
+  color: white;
+}
+
+.upgrade-buttons:hover {
+  background-color: darkgrey;
+}
+
+.upgrade-buttons:active {
+  background-color: gold;
+}
+
+.right-sidebar-text {
+  background-color: #000000b4;
+  color: white;
+  text-align: center;
+  margin: 5%;
+  padding: 2% 0 2% 0;
+  border-radius: 8px;
+}
+
+#name-1,
+#name-2,
+#name-3,
+#name-4,
+#name-5,
+#name-6,
+#name-7,
+#name-8,
+#name-9,
+#name-10 {
+  font-weight: bold;
+  font-size: 1rem;
+}

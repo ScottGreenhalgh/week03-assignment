@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <title>Budget Bakery</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="container" aria-live="polite">
+      <!-- Header -->
+      <header id="header" class="header">
+        <p>Budget Bakery 2024</p>
+        <p>1.0-SNAPSHOT</p>
+        <button id="button-theme-toggle">Toggle Dark</button>
+      </header>
+      <!-- End Header -->
+      <!-- Left Sidebar -->
+      <div id="left-sidebar" class="left-sidebar">
+        <h2 class="left-sidebar-text">Bakery</h2>
+        <p class="left-sidebar-text">Cookies:</p>
+        <p class="left-sidebar-text" id="cookieCount"></p>
+
+        <p class="left-sidebar-text">Per Second:</p>
+        <p class="left-sidebar-text" id="cookiesPerSecond"></p>
+        <img
+          src="./assets/cookie.webp"
+          alt="big cookie"
+          id="cookie-image"
+          aria-label="Clickable cookie"
+        />
+      </div>
+      <!-- End Left Sidebar -->
+      <!-- Main  -->
+      <main id="main" class="main">
+        <div class="information">
+          <h2>How to play</h2>
+          <p>
+            Click the big cookie on the left to bake cookies. Invest these
+            cookies on upgrades on the right to increase production and generate
+            even more cookies. Try to reach the highest of upgrades and see how
+            many cookies you can bake per second.
+          </p>
+        </div>
+        <div class="information">
+          <h3>Save your progress</h3>
+          <p>
+            To never lose a single cookie from the bakery, the game saves
+            automatically every 60 seconds, however you can manually save
+            anytime by clicking the button below.
+          </p>
+          <button id="save-button">Save</button>
+        </div>
+
+        <div id="current-upgrades" class="information">
+          <h3>Current Upgrades</h3>
+          <p>Note: CPS is Cookies (baked) Per Second.</p>
+        </div>
+
+        <div id="cookie-notice" class="cookie-notice">
+          <p>Do you accept cookies?</p>
+          <button id="button-accept" class="cookie-button">Yes</button>
+          <button id="button-decline" class="cookie-button">No</button>
+        </div>
+      </main>
+      <!-- End Main -->
+      <!-- Right Sidebar -->
+      <div id="right-sidebar" class="right-sidebar">
+        <h2 class="right-sidebar-text">Store</h2>
+        <div id="upgrades-container"></div>
+      </div>
+      <!-- End Right Sidebar -->
+    </div>
+  </body>
+</html>
