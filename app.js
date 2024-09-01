@@ -192,6 +192,7 @@ bigCookieImage.addEventListener("click", function () {
 function updateUI() {
   cookieCountDisplay.innerText = numberWithCommas(cookieCount);
   cookiePerSecondDisplay.innerText = numberWithCommas(cookiesPerSecond);
+  buttonHighlighs();
 }
 
 function update() {
@@ -293,4 +294,18 @@ function updateUpgradeInfo(upgradeId) {
   }: ${upgradeAmounts[upgradeId]} (CPS: ${
     upgradeAmounts[upgradeId] * apiButtonsData[upgradeId].increase
   })`;
+}
+
+// --------- Highlight Syling ----------
+
+function buttonHighlighs() {
+  for (let i = 0; upgrades.length > i; i++)
+    if (!(apiButtonsData[i].cost < cookieCount)) {
+      upgrades[i].classList.remove("upgrade-buttons");
+      upgrades[i].classList.add("upgrade-buttons-nocost");
+    } else if (upgrades[i].classList.contains("upgrade-buttons-nocost")) {
+      upgrades[i].classList.add("upgrade-buttons");
+      upgrades[i].classList.remove("upgrade-buttons-nocost");
+      console.log(`${apiButtonsData[i].name} has become affordable.`);
+    }
 }
