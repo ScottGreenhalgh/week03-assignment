@@ -104,6 +104,12 @@ Overall I completed many of the targetted goals. Regarding the requirements, I f
 
 In terms of the given stretch goals, I used a single function to handle all the upgrades, using another function only to handle the click event listener logic, all of which was encapsualated within the same function. I did include animations to the big cookie and button elements. In the readme file (what we're reading currently), I originally had a description of how to operate the game here, but instead I opted to put it in the direct center of the game itself for easier usability. This is located below the "How to play" heading under main. I used a try/catch to handle situations when the API doesn't load. The only stretch goal suggested which I didn't include was a menu. This is because I instead opted to create a darkmode toggle, cookies check, manual save button, dynamically updating current upgrades, a favicon and an information pannel. I also ensured that the styling would work for the mobile aspect ratio to allow mobile play.
 
+#### Post completion Update
+
+Some small changes were made after finishing the project. To make the game a little less confusion when trying to purchase the upgrades, I changed the styling of those elements to be more transparent when unavaliable. Then I added a small if statement in the javascript to check if the cookie count was enough to cover the cost which would change the classlists of that element.
+
+Alongside this I adjusted the aria labels on some of the elements and added a sound effect to the big cookie when clicked. I sourced the sound effect from https://www.soundjay.com/.
+
 ### Difficulties
 
 Overall this project was much smoother to complete compared to week02. The main difficulty with this week was passing data between my functions and naming my variables too closely to each other. I found it difficult to tell which variable did what half the time, causing me to continually double check I had the correct variable. I used various different names variables using some variation of cookie, update and upgrade. This made it incredibly difficult to find what I needed, especially after moving many of the declarations to the global scope. When needing to pass data outside of a function, specifically data located inside the API, I found I needed to do some strange workarounds half the time. In the end I gave up with doing odd workarounds and just created a blank array in the global scope and assigned the API data directly to this, allowing it to be accessible everywhere.

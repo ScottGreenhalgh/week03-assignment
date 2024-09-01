@@ -137,6 +137,7 @@ function createUpgrades(apidata) {
 
     upgrades[i].id = apidata[i].id;
     upgrades[i].className = "upgrade-buttons";
+    upgrades[i].setAttribute("aria-label", `${apidata[i].name} upgrade`);
 
     upgrades[i].addEventListener("click", function () {
       clickedUpgrade(upgrades[i]);
@@ -308,4 +309,10 @@ function buttonHighlighs() {
       upgrades[i].classList.remove("upgrade-buttons-nocost");
       console.log(`${apiButtonsData[i].name} has become affordable.`);
     }
+}
+
+// ------------ Audio --------------
+
+function playAudio(url) {
+  new Audio(url).play();
 }

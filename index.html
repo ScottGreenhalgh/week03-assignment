@@ -31,7 +31,9 @@
       <header id="header" class="header">
         <p>Budget Bakery 2024</p>
         <p>1.0-SNAPSHOT</p>
-        <button id="button-theme-toggle">Toggle Dark</button>
+        <button id="button-theme-toggle" aria-label="toggle darkmode button">
+          Toggle Dark
+        </button>
       </header>
       <!-- End Header -->
       <!-- Left Sidebar -->
@@ -46,7 +48,8 @@
           src="./assets/cookie.webp"
           alt="big cookie"
           id="cookie-image"
-          aria-label="Clickable cookie"
+          aria-label="Clickable big cookie image"
+          onclick="playAudio('./assets/bigcookie.mp3')"
         />
       </div>
       <!-- End Left Sidebar -->
@@ -68,7 +71,7 @@
             automatically every 60 seconds, however you can manually save
             anytime by clicking the button below.
           </p>
-          <button id="save-button">Save</button>
+          <button id="save-button" aria-label="save button">Save</button>
         </div>
 
         <div id="current-upgrades" class="information">
@@ -78,8 +81,20 @@
 
         <div id="cookie-notice" class="cookie-notice">
           <p>Do you accept cookies?</p>
-          <button id="button-accept" class="cookie-button">Yes</button>
-          <button id="button-decline" class="cookie-button">No</button>
+          <button
+            id="button-accept"
+            class="cookie-button"
+            aria-label="accept tracking cookies button"
+          >
+            Yes
+          </button>
+          <button
+            id="button-decline"
+            class="cookie-button"
+            aria-label="decline tracking cookies button"
+          >
+            No
+          </button>
         </div>
       </main>
       <!-- End Main -->
