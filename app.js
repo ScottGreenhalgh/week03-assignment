@@ -180,8 +180,9 @@ addUpgradesToPage();
 
 //-------- Counter --------
 
+const formatter = new Intl.NumberFormat();
 function numberWithCommas(number) {
-  return number.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+  return formatter.format(number);
 }
 
 bigCookieImage.addEventListener("click", function () {
